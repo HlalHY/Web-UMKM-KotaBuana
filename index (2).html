@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rumah Ramas Minang</title>
+  <style>
+    :root {
+      --maroon: #7b1e25;
+      --red: #a52a2a;
+      --cream: #fffaf0;
+      --gold: #d7a84b;
+      --green: #178447;
+      --text: #2e2925;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #faf7f1;
+      color: var(--text);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 22px max(6.5%, calc((100% - 1170px) / 2));
+      background: #fff;
+      box-shadow: 0 2px 10px #0000000a;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    .logo {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      color: var(--maroon);
+      white-space: nowrap;
+    }
+    nav { display: flex; gap: 28px; flex-wrap: wrap; }
+    nav a {
+      color: #493b35;
+      text-decoration: none;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+    nav a:hover { color: var(--red); }
+    .hero {
+      text-align: center;
+      padding: 52px 20px 38px;
+      background: linear-gradient(135deg, #fff4dc, #f8e8d4);
+      border-bottom: 4px solid var(--gold);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before, .hero::after {
+      content: "✦";
+      position: absolute;
+      color: #c99737;
+      font-size: 62px;
+      opacity: .22;
+      top: 25px;
+    }
+    .hero::before { left: 9%; }
+    .hero::after { right: 9%; }
+    .ornament { color: var(--red); font-size: 22px; letter-spacing: 8px; }
+    .hero h1 { margin: 10px 0; font-size: clamp(28px, 4vw, 42px); color: var(--maroon); }
+    .hero p { margin: 0 auto; max-width: 650px; line-height: 1.7; color: #65554a; }
+    .menu-section { max-width: 1170px; margin: 0 auto; padding: 38px 20px 55px; }
+    .section-heading { text-align: center; margin-bottom: 26px; }
+    .section-heading h2 { color: var(--maroon); margin: 0 0 8px; font-size: 27px; }
+    .section-heading p { margin: 0; color: #796b60; }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .menu-card {
+      background: #fff;
+      border: 1px solid #eee6dc;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 4px 14px #41200b0a;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .menu-card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px #41200b17; }
+    .menu-card img {
+      display: block;
+      width: 100%;
+      height: 245px;
+      object-fit: cover;
+      background: #eee;
+    }
+    .menu-card h3 { font-size: 17px; font-weight: 600; margin: 18px 0 10px; min-height: 40px; }
+    .price { color: #8d332c; font-size: 16px; margin: 0 0 17px; font-weight: 700; }
+    .order-btn {
+      display: block;
+      background: #20c765;
+      color: #fff;
+      padding: 13px 8px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 700;
+      transition: background .2s;
+    }
+    .order-btn:hover { background: #159d4b; }
+    .about {
+      text-align: center;
+      padding: 30px 20px;
+      background: #fff;
+      border-top: 1px solid #eee5d9;
+    }
+    .about h2 { color: var(--maroon); margin-top: 0; }
+    .about p { max-width: 700px; margin: 0 auto; line-height: 1.7; color: #65554a; }
+    footer {
+      background: var(--maroon);
+      color: #fff7e9;
+      text-align: center;
+      padding: 18px;
+      font-size: 13px;
+    }
+    @media (max-width: 950px) {
+      .menu-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      header { padding-left: 4%; padding-right: 4%; }
+    }
+    @media (max-width: 560px) {
+      header { flex-direction: column; gap: 15px; }
+      nav { justify-content: center; gap: 16px; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .menu-card img { height: 280px; }
+      .hero::before { left: 2%; }
+      .hero::after { right: 2%; }
+    }
+  </style>
+</head>
+<body>
+  <header id="beranda">
+    <div class="logo">RUMAH RAMAS</div>
+    <nav>
+      <a href="#beranda">BERANDA</a>
+      <a href="#tentang">TENTANG KAMI</a>
+      <a href="#menu">MENU</a>
+      <a href="#kontak">KONTAK</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="ornament">❖ ✦ ❖</div>
+    <h1>Rasa Minang, Bikin Rindu!</h1>
+    <p>Nikmati nasi ramas dengan lauk pilihan dan cita rasa khas Minangkabau. Enak, mengenyangkan, dan ramah di kantong.</p>
+    <div class="ornament">⌁ ❖ ⌁</div>
+  </section>
+
+  <main class="menu-section" id="menu">
+    <div class="section-heading">
+      <h2>Menu Favorit Kami</h2>
+      <p>Pilih lauk kesukaanmu, lalu pesan dengan mudah.</p>
+    </div>
+
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?auto=format&fit=crop&w=700&q=80" alt="Nasi dengan lauk ayam rendang">
+        <h3>Nasi Ayam Rendang</h3>
+        <p class="price">Rp12.000</p>
+        <a class="order-btn" href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Nasi%20Ayam%20Rendang" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+      </article>
+
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=700&q=80" alt="Hidangan ayam pop dengan nasi">
+        <h3>Nasi Ayam Pop</h3>
+        <p class="price">Rp14.000</p>
+        <a class="order-btn" href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Nasi%20Ayam%20Pop" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+      </article>
+
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=80" alt="Nasi dengan perkedel kentang">
+        <h3>Nasi Perkedel Kentang</h3>
+        <p class="price">Rp13.000</p>
+        <a class="order-btn" href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Nasi%20Perkedel%20Kentang" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+      </article>
+
+      <article class="menu-card">
+        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=700&q=80" alt="Nasi dengan ayam sambal cabai">
+        <h3>Nasi Ayam Cabe</h3>
+        <p class="price">Rp12.000</p>
+        <a class="order-btn" href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Nasi%20Ayam%20Cabe" target="_blank" rel="noopener">Pesan via WhatsApp</a>
+      </article>
+    </div>
+  </main>
+
+  <section class="about" id="tentang">
+    <h2>Tentang Rumah Ramas</h2>
+    <p>Kami menyajikan menu nasi ramas terinspirasi dari masakan khas Minangkabau, dengan pilihan lauk yang nikmat untuk menemani makan siang maupun makan malam.</p>
+  </section>
+
+  <footer id="kontak">
+    <p>© 2026 Rumah Ramas Minang · Rasa nikmat, harga bersahabat</p>
+    <p>Pesan sekarang melalui tombol WhatsApp di menu favoritmu.</p>
+  </footer>
+</body>
+</html>
